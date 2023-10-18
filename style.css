@@ -52,4 +52,11 @@ body {
     width: 100px;
     height: 40px;
     font-size: medium;
+
+}
+
+form {
+    position: relative;
+    margin-left: 1000px;
+
 }
