@@ -1,0 +1,27 @@
+<%- include('../includes/head.ejs') %>
+</head>
+
+<body>
+    <%- include('../includes/navigation.ejs') %>
+    <h1>View Review of any Company</h1>
+    <%- include('../includes/get.ejs') %>
+    <h2>Your Company Review</h2>
+    <h3>Company Name : <%= name %></h3>
+    <h4>Company Rationg is : <%= rating %></h4>
+    <hr>
+    <h2>Employee Reviews</h2>
+   <% data.forEach(company => { %>
+        <ul>
+            <li>
+               <%=  company.Rating %>
+            </li>
+            <li>
+                <%=  company.pros %>
+             </li>
+             <li>
+                <%=  company.cons %>
+             </li>
+        </ul>
+        <hr>
+   <% }) %>
+<%- include('../includes/end.ejs') %>
