@@ -10,16 +10,20 @@
     <h4>Company Rationg is : <%= rating %></h4>
     <hr>
     <h2>Employee Reviews</h2>
+
    <% data.forEach(company => { %>
         <ul>
             <li>
+               Rating is :
                <%=  company.Rating %>
             </li>
             <li>
-                <%=  company.pros %>
+               Pros :
+                <%=  company.Pros %>
              </li>
              <li>
-                <%=  company.cons %>
+               Cons :
+                <%=  company.Cons %>
              </li>
         </ul>
         <hr>

@@ -1,13 +1,12 @@
-<div class="backdrop"></div>
-<header class="main-header">
-    <button id="side-menu-toggle">Menu</button>
-    <nav class="main-header__nav">
+<div class="backdrop"  ></div>
+<header class="main-header" style="background-color: rgb(175, 77, 199);">
+    <nav class="main-header__nav" >
         <ul class="main-header__item-list">
             <li class="main-header__item">
-                <a class="<%= path === '/review' ? 'active' : '' %>" href="/givereview">Give Review</a>
+                <a class="<%= path === '/review' ? 'active' : '' %>" href="/givereview" style="color: aliceblue;">Give Review</a>
             </li>
             <li class="main-header__item">
-                <a class="<%= path === '/reviews' ? 'active' : '' %>" href="/viewreview">View Review</a>
+                <a class="<%= path === '/reviews' ? 'active' : '' %>" href="/viewreview" style="color: aliceblue;">View Review</a>
             </li>
         </ul>
     </nav>

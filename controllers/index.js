@@ -3,9 +3,10 @@ const Reviews = require('../models/reviews')
 exports.getReview = async (req,res,next) => {
     const cName =req.body.company;
     console.log('company name :'+cName);
-    await Reviews.findAll({hwere: {Company: cName}})
+    await Reviews.findAll({where: {Company: cName}})
     .then(op => {
-        console.log(op[0]);
+        console.log(op);
+        console.log(op[0])
         let sum=0,a=0;
         // for(let i=0;i<op.length;i++)
         // {
@@ -21,7 +22,7 @@ exports.getReview = async (req,res,next) => {
         res.render('main/review',{
             path: '/main/review',
             pageTitle: 'Customer Reviews',
-            data: op[0],
+            data: op,
             name:cName,
             rating: rating,
         })
@@ -30,8 +31,10 @@ exports.getReview = async (req,res,next) => {
 
 exports.postReview = async (req,res,next) => {
     const data = req.body;
+    console.log(data)
     const review = await Reviews.create({
         Company: data.company,
+        Rating: data.rating,
         Pros: data.pros,
         Cons: data.cons
     })
