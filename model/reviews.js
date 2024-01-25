@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-const sequelize = require('../utils/database');
+const sequelize = require('../util/database');
 
 const Reviews = sequelize.define('Reviews', {
     id:
@@ -11,7 +11,7 @@ const Reviews = sequelize.define('Reviews', {
     },
     Company: Sequelize.STRING,
     Rating: Sequelize.INTEGER,
-    Pros:Sequelize.STRING,
+    Pros: Sequelize.STRING,
     Cons: Sequelize.STRING
 });
 
